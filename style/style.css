@@ -73,11 +73,65 @@ padding: 0;
     width: 100%;
 }
 
+.main{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.main > section{
+    margin-bottom: 100px;
+}
+/* sponsor section style  */
+.sponsor-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border:1px solid #bdbdbd;
+    padding: 20px;
+}
+/* Popular Collection section style  */
+.section-title{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.cart{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.cart-container{
+    box-shadow: 0px 0px 20px rgb(190, 190, 190);
+    border-radius: 5px;
+}
+.cart-item{
+    padding: 14px;
+}
+.cart-item img{
+    width: 100%;
+}
+.cart-title{
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 16px;
+    color: #18191F;
+}
+.cart-price{
+    font-size: 1.5rem;
+    margin: 6px 0px 27px 0px;
+}
+.cart-description{
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 17px;
+    color: #787885;
+}
 
 /* responsive Small device  */
 @media screen and ( max-width: 576px) {
     .header{
-        margin: 20px;
+        margin: 20px 0px;
     }
     .nav, .nav ul{
         flex-direction: column;
@@ -89,9 +143,33 @@ padding: 0;
     .banner{
         flex-direction: column-reverse;
     }
-    .banner-image{
-        width: 100%;
+    .banner-content{
+        text-align: center;
     }
+    .banner-image{
+        background-image: none;
+    }
+    .banner-title{
+        font-size: 1.8rem;
+    }
+    .main > section{
+        margin: 50px auto;
+    }
+    .sponsor-container{
+        max-width: 275px;
+        flex-wrap: wrap;
+        gap: 20px;
+        border: none;
+        padding: 0;
+    }
+    .sponsor-container img{
+        width: 18%;
+    }
+    .cart{
+        grid-template-columns: repeat(1,1fr);
+        margin: 20px;
+    }
+    
 }
 
 /* responsive medium device  */
@@ -102,5 +180,16 @@ padding: 0;
     .nav ul{
         gap: 10px;
     }
-    
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .sponsor-container{
+        flex-wrap: wrap;
+        border: none;
+        gap: 30px;
+    }
+    .cart{
+        grid-template-columns: repeat(2,1fr);
+        margin: 20px;
+    }
 }
